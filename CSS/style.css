@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Medula One' cursive;
+    --background-color: rgba(81, 122, 147, 0.822);
+}
+
+   /* NAVBAR STYLING STARTS */
+   .navbar {
+    position: relative; 
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--font-family);
+    border-bottom: 8px solid black;
+}
+.navbar li {
+    list-style: none;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+.navbar a:hover {
+    color: rgb(59, 179, 248);
+}
+
+   /* LOGO */
+.navbar img {
+    width: 50px;
+}
+.logo {
+    font-size: 1.75em;
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    right: 0;
+    left: 0;
+    text-align: center;        
+    padding: 10px 0;
+}
+.menu li:hover {
+    display: inline-block;
+    background-color: black;
+    transition: 0.3s ease;
+    width: 100%;
+}
+.menu li{
+    margin-top: 12px;
+    font-size: 1.2em;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+}
+  /*  HAMBURGUER  */
+.hamburger {
+    display: block;
+    padding: 6px 13px;
+    font-size: 2em;
+}
+.hamburger:hover {
+    background-color: black;
+    color: rgb(59, 179, 248);
+}
+input[type=checkbox] {
+    display: none;
+} 
+  /* -- ACCESIBILIDAD --  */
+.accebility {
+    display: none;
+    font-size: 1.5em;
+    padding: 0px 10px;
+}
+
+/* -- SLIDE -- */
+    /* -- slidesshow -- */
+.mySlide {
+    display: none;
+}
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+}
+    /* -- Next & previous buttons -- */
+.prev, .next {
+    background-color: rgb(0, 0, 0, .3);
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: rgb(59, 179, 248);
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+    /* --  Position the "next button" to the right -- */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+    /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: black;
+}
+    /* -- Caption text -- */
+.text {
+    font-family: var(--font-family);
+    background-color: rgba(81, 122, 147, 0.822);
+    color: #f2f2f2;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 12px;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+}
+    /* -- Number text (1/3 etc) -- */
+.numbertext {
+    background-color: rgb(0, 0, 0, .4);
+    color: #f2f2f2;
+    font-family: var(--font-family);
+    font-size: .6em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+    /* -- The dots/bullets/indicators -- */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot:hover {
+    background-color: rgb(59, 179, 248);
+}
+    /* -- Fading animation -- */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* -- BANNER -- */
+    /* -- banner activities --*/
+.container-banner {
+    background-color: white;
+    padding: 10px;
+}
+.title-ban {
+    background-color: white;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(4, 92, 143);
+    margin-bottom: 10px;
+}
+    /* -- box container -- */
+.container-box {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    border: 2px solid rgba(81, 122, 147, 0.822);
+    padding: 2px;
+}
+.ban-img {
+    width: 100%; 
+}
+.ban-description {
+    text-align: center;
+    padding: 0px 10px;
+}
+.ban-activity h3 {
+    font-family: var(--font-family);
+    font-size: 1.4em;
+    text-align: center;
+}
+.ban-activity a {
+    text-decoration: none;
+    color: black;
+}
+.hr-index {
+    width: 65%;
+    height: 3px;
+    background-color: rgb(4, 92, 143);
+}
+.ban-description p {
+    text-align:initial ;
+    font-family: var(--font-family);
+    overflow: scroll;
+    padding: 2px;
+}
+    /* -- links activity --*/
+.list-option {
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+.links-activity {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+.links-activity li {
+    text-align: center;
+}
+.links-activity li {
+    list-style: none;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1.1em;
+}
+.links-activity a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+.links-activity a:hover {
+    color: black;
+}
+
+/* -- SOCIAL MEDIA -- */
+.container-social {
+    text-align: center;
+}
+.social-title {
+    font-family: var(--font-family);
+    font-size: 1.4em;
+}
+.social-icon {
+    font-size: 2.3em;
+}
+.social-icon .fab {
+    color: rgb(4, 92, 143);
+}
+.social-icon .fab:hover {
+    color: rgb(59, 179, 248);
+}
+
+/* -- INTRO RAFTING IN SJOA -- */
+.raft-title {
+    text-align: center;
+    font-family: var(--font-family);
+    padding: 10px;
+    font-size: 1.2em;
+}
+.raft-intro img {
+    width: 100%;
+}
+.raft-intro p {
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: 1.1em;
+}
+.list-rafting {
+    text-align: left;
+    padding-left: 25px;
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* -- CONTACT FORM -- */
+    /* --  Title -- */
+.title-form {
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-family: var(--font-family);
+    font-size: 1.3em;
+}
+.dg-contact {
+    text-align: center;
+    font-size: 1.3em;
+}
+.con-con p {
+    padding: 0px 10px;
+    font-family: var(--font-family);
+}
+hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(4, 92, 143);
+}
+    /* -- Fieldform -- */
+.fieldform {
+    padding: 10px;
+}
+fieldset {
+    border: 3px solid rgb(4, 92, 143);
+    padding: 10px;
+    background-color: rgba(59, 179, 248, 0.084);
+}
+legend {
+    font-family: var(--font-family);
+}
+label {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: bold;
+}
+input {
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 75%;
+}
+textarea {
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+.enviar {
+    width: 30%;
+    float: right;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--background-color);  
+    color: white;  
+}
+.enviar:hover {
+    background-color: black;
+    color: rgb(59, 179, 248);
+}
+    /* -- lateral -- */
+.lateral-contact {
+    display: none;
+}
+
+/* -- ACTIVITY PAGE -- */
+    /* -- INTRO -- */
+.container-activity {
+    padding: 10px;
+    content: "";
+    clear: both;
+    display: table;
+}
+.container-activity img {
+    width: 33.33%;
+    float: left;
+    padding: 5px;
+}
+.container-activity h2 {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 1.7em;
+    padding-bottom: 5px;
+}
+.container-activity p {
+    padding: 10px 5px;
+    font-size: 1.2em;
+}
+.hr-tips {
+    width: 75%;
+    height: 2px;
+    background-color: rgb(59, 179, 248);
+    border: 0px;
+}
+.tips-activity {
+    padding: 10px 20px;
+}
+.tips-activity h4 {
+    font-size: 1.2em;
+}
+    /* -- BANNER -- */
+.container-detail {
+    padding: 10px;
+    content: "";
+    clear: both;
+    display: table;
+}
+.container-detail img {
+    width: 100%;
+}
+.ban-incluides {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.ban-incluides h3 {
+    text-align: center;
+    font-family: var(--font-family);
+    border-bottom: 2px solid rgba(59, 179, 248);
+    padding-bottom: 5px;
+}
+.ban-incluides ul {
+    list-style: none;
+    padding: 5px;
+}
+.ban-incluides li {
+    font-family: var(--font-family);
+    padding-top: 5px;
+}
+.data {
+    width: 100%;
+}
+.data-price {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+    /* -- FORM BOOKING -- */
+.fieldset-booking {
+    padding: 0px 15px; 
+}
+.pax-activity {
+    width: 70px;
+}
+
+.date-activity {
+    width: 130px;
+}
+.btn-activity {
+    float: right;
+    width: 230px;
+    margin-top: 10px;
+    background-color: rgb(4, 92, 143);
+    color: white;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+.btn-activity:hover {
+    background-color: black;
+    color: rgb(59, 179, 248);
+}
+.lateral-left {
+    display: none;
+}
+
+/* -- FOOTER -- */
+    /* -- FOOTER CONTAINER -- */
+.footer-dg {
+    padding: 10px;
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--font-family);
+    border-top: 15px solid black;
+}
+    /* -- GRID CONTAINER -- */
+.container-fluid {
+    display: grid;
+    grid-template-rows: auto;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    gap: 10px;
+}
+.footer-contact a {
+    text-decoration: none;
+    color: white;
+}
+.footer-logo img {
+    width: 85px;
+}
+.footer-logo h5 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+.container-fluid h5 {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+.container-fluid p {
+    padding-top: 5px;
+}
+.copy b {
+    font-size: 1.1em;
+}
+.light {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(4, 92, 143);
+
+}
+
+/* -- MEDIA QUERIES -- */
+@media screen and (min-width: 600px) {
+/* -- NAVBAR --*/
+.navbar img {
+    width: 50px;
+    margin: 5px 10px;
+}
+.logo {
+    font-size: 1.75em;
+    padding: 0px 10px;
+}
+.hamburger {
+    font-size: 2em;
+    padding: 11px 13px;
+}
+.accebility {
+    display: block;
+    font-size: 1.75em;
+}
+/* -- SLIDE -- */
+.text {
+    font-size: 1.7em;
+}
+
+/* -- FORM BOOKING --*/
+.ingresa {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.fieldform {
+    padding: 10px 90px;
+}
+}
+
+/* -- LARGE DEVICES -- */
+@media only screen and (min-width: 992px) {
+/* NAVBAR MENU */
+.navbar {
+    display: flex;
+    border-bottom: 10px solid black;
+}
+.menu {
+    display: block;
+    position: relative;
+    background-color:rgb(59, 179, 248, 0);
+}
+.menu li {
+    display: inline;
+    margin-top: 0px;
+}
+.menu li:hover {
+    display: inline;
+    padding: 22px 0px;
+}
+.menu li a {
+    padding: 22px 20px;
+}
+.active {
+    background-color: black;
+}
+/* -- SLIDE -- */
+.prev, .next {
+    top: 40%;
+    padding: 18px;
+    font-size: 35px;
+}
+.text {
+    font-size: 2em;
+}
+
+/* -- HAMBURGER MENU -- */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* -- ACTIVITY -- */
+.container-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.br-activity {
+    display: none;
+}
+.title-ban {
+    grid-column: 1 / 5;
+}
+.links-activity li {
+    font-size: .95em;
+}
+
+/*-- DETAILS ACTIVITIES -- */
+.ban-incluides {
+    width: 33.33%;
+    background-color: var(--background-color);
+    color: white;
+    margin-top: 10px;
+}
+.ban-incluides h3 {
+    border-bottom: 2px solid rgb(4, 92, 143);
+}
+.ban-incluides li {
+    font-family: var(--font-family);
+    font-size: 1.1em;
+}
+.booking-lateral {
+    background: url("/imagenes/enjoying-rafting.jpg") no-repeat;
+    padding: 10px;
+}
+.data-price {
+    font-size: 1.4em;
+}
+.form-activity {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-activity label {
+    color: white;
+}
+.form-activity fieldset {
+    background-color: rgba(81, 122, 147, 0.822);
+}
+.hr-tips {
+    display: none;
+}
+
+/* -- SOCIAL MEDIA -- */
+.container-social {
+    text-align: center;
+}
+.social-icon {
+    font-size: 3.5em;
+}
+
+/* -- CONTACT PAGE -- */
+.form-contact {
+    display: grid;
+    grid-template-columns: 58.33% 41.66%;
+    padding: 10px;
+}
+.fieldform {
+    padding: 10px;
+}
+.lateral-contact {
+    display: grid;
+    grid-column: 2 / 3;
+}
+.map iframe {
+    width: 100%;
+    padding: 18px 5px 0px;
+    height: 400px;
+}
+.img-contact h4 {
+    width: 100%;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: 2em;
+    padding: 25px 10px 5px;
+}
+.hr-picontact {
+    padding: 2px;
+    background-color: rgb(4, 92, 143);
+    border: 0px;
+    width: 65%;
+}
+.img-contact p {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 2.8em;
+    padding-top: 10px;
+    font-weight: bold;
+    color: rgb(1, 129, 131);
+    text-shadow: 1px 4px 19px white;
+}
+.img-contact {
+    height: 164px;
+    margin: 10px 5px;
+    background-image: url(/imagenes/rafting-contact.jpg);
+    
+}
+
+/* -- FOOTER --*/
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+.footer-logo {
+    grid-column: 1 / 4;
+}
+.footer-logo img {
+    width: 85px;
+}
+.copy {
+    grid-column: 1 / 4;
+}
+.light {
+    width: 75%;
+    color: rgb(4, 92, 143);
+}
+}
