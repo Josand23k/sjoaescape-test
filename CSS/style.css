@@ -195,7 +195,7 @@ input[type=checkbox] {
     border: 2px solid rgba(81, 122, 147, 0.822);
     padding: 2px;
 }
-.ban-img {
+.ban-img img {
     width: 100%; 
 }
 .ban-description {
