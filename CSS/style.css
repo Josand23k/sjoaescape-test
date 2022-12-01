@@ -702,7 +702,7 @@ textarea {
 .img-contact {
     height: 164px;
     margin: 10px 5px;
-    background-image: url(imagenes/rafting-contact.jpg);
+    background-image: url("imagenes/rafting-contact.jpg");
     
 }
 
