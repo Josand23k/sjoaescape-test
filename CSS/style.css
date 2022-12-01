@@ -146,7 +146,13 @@ input[type=checkbox] {
     position: absolute;
     top: 0;
 }
+.numbertext img {
+    width: 100%;
+}
     /* -- The dots/bullets/indicators -- */
+    .dot-container {
+        text-align: center;
+    }
 .dot {
     cursor: pointer;
     height: 15px;
