@@ -629,7 +629,8 @@ textarea {
     font-size: 1.1em;
 }
 .booking-lateral {
-    background: url("imagenes/enjoying-rafting.jpg") no-repeat;
+   background: url("imagenes/enjoying-rafting.jpg") no-repeat;
+   /*background-color: rgb(59, 179, 248);*/
     padding: 10px;
 }
 .data-price {
