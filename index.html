@@ -17,20 +17,33 @@
     <a href="index.html"><img src="imagenes/logo-blue.png" alt="Logo Sjoa Escape"></a> 
     <h1 class="logo">Sjoa Escape</h1>
     <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-      <!-- USING CHECKBOX HACK -->
-      <input type="checkbox" id="checkbox_toggle" />
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-      <!-- NAVIGATION MENUS -->
-      <div class="menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li>
-          <a href="rafting-sjoa.html">Rafting Sjoa</a>
-        </li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </div>
-    </ul>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <div class="dropdown">
+          <button class="dropbtn">Rafting
+          </button>
+          <div class="dropdown-content">
+              <a href="sjoa-classic.html">Sjoa Classic</a>
+              <a href="family-rafting.html">Family Rafting</a>
+              <a href="rafting-aseng.html">Rafting Åseng</a>
+              <a href="ultimate-rafting.html">Ultimate Rafting</a>
+          </div>
+      </div> 
+      <div class="dropdown">
+          <button class="dropbtn">Activities
+          </button>
+          <div class="dropdown-content">
+              <a href="riverboard-sjoa.html">Riverboard</a>
+              <a href="dookies-sjoa.html">Dookies</a>
+              <a href="klattrapark.html">Klättrapark</a>
+              <a href="via-ferrata.html">Via Ferrata</a>
+          </div>
+      </div> 
+      <a href="contact.html">Contact</a>
+  </div>
+  <div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
     <div class="accebility">
       <a href="#" class="language" aria-label="Activate the accessibility mode of the web page"><i class="fa fa-language"></i></a>
     </div>
